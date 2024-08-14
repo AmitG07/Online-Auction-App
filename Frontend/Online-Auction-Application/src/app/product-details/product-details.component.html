@@ -1,0 +1,33 @@
+<div class="card-container" *ngIf="product; else loading">
+  <mat-card class="product-card">
+    <div class="product-details-container">
+      <img [src]="product.image || 'assets/default-product.png'" alt="{{ product.name }}" class="product-image">
+      <div class="product-details">
+        <mat-card-header>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p><strong>Description:</strong> {{ product.description }}</p>
+          <p><strong>Category:</strong> {{ product.category }}</p>
+          <p><strong>Starting Price:</strong> {{ product.startingPrice | currency: 'INR' }}</p>
+          <p><strong>Current Highest Bid:</strong> {{ product.currentHighestBid | currency: 'INR' }}</p>
+          <p><strong>Auction End Time:</strong> {{ product.auctionEndTime | date: 'MMMM d, y' }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="placeBid()">
+            Place Bid
+          </button>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<ng-template #loading>
+  <mat-card class="product-card">
+    <mat-card-content class="text-center">
+      <mat-spinner></mat-spinner>
+      <p>Loading product details...</p>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

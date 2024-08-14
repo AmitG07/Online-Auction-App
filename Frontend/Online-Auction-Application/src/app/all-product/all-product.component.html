@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Display Products -->
+      <div *ngIf="Products && Products.length">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <h3 class="text-center mt-2">List Of Products</h3>
+          </mat-card-header>
+          <mat-card-content>
+            <table mat-table [dataSource]="Products" class="mat-elevation-z8">
+              <!-- Product Image Column -->
+              <ng-container matColumnDef="image">
+                <mat-header-cell *matHeaderCellDef> Product Image </mat-header-cell>
+                <mat-cell *matCellDef="let product">
+                  <img [src]="product.image || 'assets/default-product.png'" alt="{{ product.name }}" class="product-image">
+                </mat-cell>
+              </ng-container>
+
+              <!-- Product Name Column -->
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.name }} </mat-cell>
+              </ng-container>
+
+              <!-- Description Column -->
+              <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.description }} </mat-cell>
+              </ng-container>
+
+              <!-- Starting Price Column -->
+              <ng-container matColumnDef="startingPrice">
+                <mat-header-cell *matHeaderCellDef> Starting Price </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.startingPrice | currency: 'INR' }} </mat-cell>
+              </ng-container>
+
+              <!-- Reserved Price Column -->
+              <ng-container matColumnDef="reservedPrice">
+                <mat-header-cell *matHeaderCellDef> Reserved Price </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.reservedPrice | currency: 'INR' }} </mat-cell>
+              </ng-container>
+
+              <!-- Auction End Time Column -->
+              <ng-container matColumnDef="auctionEndTime">
+                <mat-header-cell *matHeaderCellDef> Auction End Time </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.auctionEndTime | date:'MMMM d, y' }} </mat-cell>
+              </ng-container>
+
+              <!-- Category Column -->
+              <ng-container matColumnDef="category">
+                <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+                <mat-cell *matCellDef="let product"> {{ product.category }} </mat-cell>
+              </ng-container>
+
+              <!-- Actions Column -->
+              <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+                <mat-cell *matCellDef="let product">
+                  <button mat-raised-button color="primary" [routerLink]="'/allBids-of-Product/' + product.productId">All Bids</button>
+                </mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </table>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div *ngIf="!Products.length">
+        <mat-card>
+          <mat-card-content class="text-center">
+            <p>No products found.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

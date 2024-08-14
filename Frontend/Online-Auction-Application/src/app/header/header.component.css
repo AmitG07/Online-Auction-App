@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+  }
+  
+  .header-title {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-toolbar {
+    background-color: rgb(19, 155, 185);
+  }
+  
+  mat-button {
+    color: white;
+  }
+  
+  mat-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

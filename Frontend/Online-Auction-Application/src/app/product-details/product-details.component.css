@@ -1,0 +1,126 @@
+/* Container for centering the mat-card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 16px;
+}
+
+/* Style for the mat-card */
+.product-card {
+  max-width: 700px;
+  width: 100%;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Flex container for image and details */
+.product-details-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Style for product image */
+.product-image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+  margin-top: 50px;
+}
+
+/* Style for product details */
+.product-details {
+  flex: 1; /* Takes up the remaining space */
+}
+
+/* Header style for mat-card */
+mat-card-header {
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #eee;
+  padding: 16px 0;
+}
+
+/* Title style for mat-card-header */
+mat-card-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Content style for mat-card */
+mat-card-content {
+  font-size: 15px;
+  color: #444;
+}
+
+/* Style for paragraph inside mat-card-content */
+mat-card-content p {
+  margin: 12px 0;
+}
+
+/* Style for mat-card-actions */
+mat-card-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Style for the Place Bid button */
+mat-card-actions button {
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+mat-card-actions button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Style for the loading message */
+mat-card-content.text-center {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+mat-spinner {
+  margin-bottom: 16px;
+}
+
+/* Additional media query for responsiveness */
+@media (max-width: 600px) {
+  .product-card {
+    margin: 8px;
+    padding: 12px;
+  }
+
+  .product-image {
+    width: 100%; /* Full width on small screens */
+    margin-right: 0;
+    margin-bottom: 16px; /* Space below the image */
+  }
+
+  mat-card-title {
+    font-size: 24px;
+  }
+
+  mat-card-content {
+    font-size: 16px;
+  }
+
+  mat-card-actions button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

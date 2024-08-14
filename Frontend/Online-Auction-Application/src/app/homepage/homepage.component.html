@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Search and Sort Fields -->
+      <mat-card class="search-sort-card">
+        <form (ngSubmit)="onSearchAndSort()" [formGroup]="searchForm" class="search-sort-form">
+          <div class="form-field search-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Product Name</mat-label>
+              <input matInput formControlName="name" placeholder="Search by name...">
+            </mat-form-field>
+          </div>
+          <div class="form-field category-field">
+            <mat-form-field appearance="outline" style="padding: 0px;">
+              <mat-label>Category</mat-label>
+              <input matInput formControlName="category" placeholder="Search by category...">
+            </mat-form-field>
+          </div>
+          <div class="form-field price-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Min Price</mat-label>
+              <input matInput formControlName="minPrice" type="number" placeholder="Min">
+            </mat-form-field>
+          </div>
+          <div class="form-field price-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Max Price</mat-label>
+              <input matInput formControlName="maxPrice" type="number" placeholder="Max">
+            </mat-form-field>
+          </div>
+          <div class="form-field sort-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Sort By</mat-label>
+              <mat-select formControlName="sortBy">
+                <mat-option value="Price">Price</mat-option>
+                <mat-option value="Time">Time</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-buttons">
+            <button mat-raised-button color="primary" class="search-button" type="submit">Search</button>
+            <button mat-button color="accent" class="clear-button" type="button" (click)="clearFilters()">Clear</button>
+          </div>
+        </form>
+      </mat-card>
+
+      <!-- Display Products in a Grid -->
+      <div *ngIf="Products && Products.length">
+        <div class="product-grid">
+          <mat-card class="product-card" *ngFor="let product of Products">
+            <img mat-card-image [src]="product.image || 'assets/default-product.png'" alt="{{ product.name }}">
+            <mat-card-header>
+              <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+              <mat-card-title>{{ product.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ product.startingPrice | currency: 'INR' }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-icon-button [routerLink]="'/product-details/' + product.productId">
+                <mat-icon>visibility</mat-icon>
+                <span class="action-label">View</span>
+              </button>
+              <button mat-icon-button [routerLink]="'/add-bid/' + product.productId">
+                <mat-icon>gavel</mat-icon>
+                <span class="action-label">Bid</span>
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+      <div *ngIf="!Products.length">
+        <mat-card>
+          <mat-card-content class="text-center">
+            <p>No products found.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

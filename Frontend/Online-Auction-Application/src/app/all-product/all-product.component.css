@@ -1,0 +1,55 @@
+  .form-field {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    text-align: center;
+  }
+  
+  .mat-icon {
+    font-size: 24px;
+    color: #3f51b5;
+  }
+  
+  .mat-icon-button {
+    padding: 0;
+  }
+  
+  .search-sort-form .form-field {
+    margin-bottom: 5px;
+  }
+  
+  .search-sort-form button {
+    margin-right: 8px;
+  }
+  
+  /* Style for product image */
+.product-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+}
+
+/* General table styling */
+.mat-header-cell, .mat-cell {
+  text-align: center;
+}
+
+/* Style for table container */
+table.mat-table {
+  width: 100%;
+}
+
+/* Style for no products message */
+.text-center {
+  text-align: center;
+}

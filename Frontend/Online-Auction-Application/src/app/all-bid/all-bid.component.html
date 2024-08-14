@@ -1,0 +1,47 @@
+<div class="container">
+  <h1 class="title">All Bids</h1>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Product Name Column -->
+    <ng-container matColumnDef="productName">
+      <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
+      <mat-cell *matCellDef="let bid"> {{bid.productName}} </mat-cell>
+    </ng-container>
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef> User Name </mat-header-cell>
+      <mat-cell *matCellDef="let bid"> {{bid.userName}} </mat-cell>
+    </ng-container>
+
+    <!-- Bid Amount Column -->
+    <ng-container matColumnDef="bidAmount">
+      <mat-header-cell *matHeaderCellDef> Bid Amount </mat-header-cell>
+      <mat-cell *matCellDef="let bid"> {{bid.bidAmount | currency: 'INR'}} </mat-cell>
+    </ng-container>
+
+    <!-- Bid Time Column -->
+    <ng-container matColumnDef="bidTime">
+      <mat-header-cell *matHeaderCellDef> Bid Date </mat-header-cell>
+      <mat-cell *matCellDef="let bid"> {{bid.bidingDate | date:'MMMM d, yyyy'}} </mat-cell>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let bid"> {{bid.bidStatus}} </mat-cell>
+    </ng-container>
+
+    <!-- Delete Action Column -->
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+      <mat-cell *matCellDef="let bid">
+        <button mat-icon-button color="primary" (click)="deleteBid(bid.bidId)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

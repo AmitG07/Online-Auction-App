@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="header">
+  <!-- Left Section: Only shown when userName is null -->
+  <ng-container *ngIf="userName == null">
+    <button mat-button class="header-title" routerLink="/homepage">Online Auction</button>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/admin-dashboard">Admin Login</button>
+    <button mat-button routerLink="/customer-dashboard">Customer Login</button>
+  </ng-container>
+
+  <!-- Right Section: Shown when userName is available -->
+  <ng-container *ngIf="userName">
+    <button mat-button class="header-title" routerLink="/homepage">Online Auction</button>
+    <span class="spacer"></span>
+
+    <ng-container *ngIf="role">
+      <button mat-button routerLink="/add-product">Add Product</button>
+      <button mat-button routerLink="/my-bid">My Bids</button>
+      <button mat-button routerLink="/all-bid">All Bids</button>
+      <button mat-button routerLink="/all-products">All Products</button>
+    </ng-container>
+
+    <ng-container *ngIf="!role">
+      <button mat-button routerLink="/add-product">Add Product</button>
+      <button mat-button routerLink="/my-bid">My Bids</button>
+    </ng-container>
+
+    <span class="spacer"></span>
+    <span class="user-info">
+      <b>{{ userName }}</b>
+      <button mat-button (click)="logout()">Logout</button>
+    </span>
+  </ng-container>
+</mat-toolbar>

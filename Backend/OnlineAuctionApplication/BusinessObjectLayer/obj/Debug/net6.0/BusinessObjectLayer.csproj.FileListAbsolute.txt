@@ -1,0 +1,14 @@
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\bin\Debug\net6.0\BusinessObjectLayer.deps.json
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\bin\Debug\net6.0\BusinessObjectLayer.runtimeconfig.json
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\bin\Debug\net6.0\BusinessObjectLayer.dll
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\bin\Debug\net6.0\BusinessObjectLayer.pdb
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.csproj.AssemblyReference.cache
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.AssemblyInfoInputs.cache
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.AssemblyInfo.cs
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.csproj.CoreCompileInputs.cache
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.dll
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\refint\BusinessObjectLayer.dll
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.pdb
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\BusinessObjectLayer.genruntimeconfig.cache
+C:\Users\amit04\Downloads\Online Auction Application\Backend\OnlineAuctionApplication\BusinessObjectLayer\obj\Debug\net6.0\ref\BusinessObjectLayer.dll

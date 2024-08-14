@@ -1,0 +1,97 @@
+/* Center the card on the page */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Card styles */
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+}
+
+/* Header styles */
+.card-header {
+    padding: 15px;
+    background-color: #43b4d7;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #2eb7e0;
+}
+
+/* Body styles */
+.card-body {
+    padding: 20px;
+    flex: 1; 
+    overflow-y: auto;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form control styles */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; 
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Center the button */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Add this to your CSS file */
+.highest-bid {
+    text-align: right;
+    font-weight: bold;
+  }  
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-container {
+        height: auto;
+        padding: 10px; 
+    }
+
+    .card {
+        margin: 10px;
+        max-height: 90vh;
+    }
+}

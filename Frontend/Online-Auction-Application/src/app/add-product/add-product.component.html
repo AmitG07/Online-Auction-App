@@ -1,0 +1,41 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Add Product</h3>
+    </div>
+    <form [formGroup]="ProductForm" (ngSubmit)="addProduct()" class="card-body">
+      <div class="form-group">
+        <label for="Name">Product Name</label>
+        <input type="text" class="form-control" formControlName="Name" placeholder="Enter Product Name">
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" formControlName="Description" rows="3"
+          placeholder="Enter Product Description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="StartingPrice">Starting Price</label>
+        <input type="number" class="form-control" formControlName="StartingPrice" placeholder="Enter Starting Price">
+      </div>
+      <div class="form-group">
+        <label for="ReservedPrice">Reserved Price</label>
+        <input type="number" class="form-control" formControlName="ReservedPrice" placeholder="Enter Reserved Price">
+      </div>
+      <div class="form-group">
+        <label for="AuctionEndTime">Auction End Date</label>
+        <input type="date" class="form-control" formControlName="AuctionEndTime">
+      </div>
+      <div class="form-group">
+        <label for="Category">Product Category</label>
+        <input type="text" class="form-control" formControlName="Category" placeholder="Enter Product Category">
+      </div>
+      <div class="form-group">
+        <label for="Image">Image</label>
+        <input type="text" class="form-control" formControlName="Image" placeholder="Enter Image Url">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Add Product</button>
+      </div>
+    </form>
+  </div>
+</div>
